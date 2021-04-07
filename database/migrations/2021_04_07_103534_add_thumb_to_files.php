@@ -14,7 +14,7 @@ class AddThumbToFiles extends Migration
     public function up()
     {
         Schema::table('files', function (Blueprint $table) {
-            //
+            $table->mediumText("thumb")->after('post_id')->nullable();
         });
     }
 
