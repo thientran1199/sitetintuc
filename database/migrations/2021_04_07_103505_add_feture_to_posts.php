@@ -14,7 +14,7 @@ class AddFetureToPosts extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            $table->mediumText("feture")->after('user_id')->nullable();
         });
     }
 
